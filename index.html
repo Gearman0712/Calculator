@@ -4,20 +4,113 @@
         <title>
 
         </title>
+        <style>
+     * {margin : 0; padding:0 ; box-sizing : border-box;}
+ body{
+     background-image: url('images/win.jpg');
+     background-size: 100% 100%;
+ }
+ .centercalcy{
+     height: 100vh;
+     display : flex;
+     justify-content : center;
+     align-items: center;
+ }
+
+ form{
+     width: 400px; height: 520px;
+     box-shadow: 0 0 10px 1px grey;
+ }
+
+ #app_name
+ { width:inherit;
+     font-size: 0.8rem;
+   background-color: #303030;
+   padding: 2px 0 2px 10px;
+   color: white;
+   border: none;
+   outline: none ;
+   font-family: 'Open sans', sans-serif;
+
+ }
+ #display_answer
+ {width:inherit;
+ height: 100px;
+ background-color: #303030;
+ font-size: 2rem ;
+ color: white;
+ text-align: right;
+
+ }
+ 
+
+
+
+
+        </style>
+        
     </head>
     <body>
         <div class ="centercalcy">
             <form name  ="calcy">
-                <input type ="text" name =" " value ="caltr" id ="app_name">
+                <input type ="text" name =" " value ="Calculator" id ="app_name">
                 
                 <input type ="text" name ="answer"  id ="display_answer">
-                 <div class ="layer1">
-                    <input type ="text" name ="" class ="main_num" value ="7" 
+                <div>
+                <input type ="button" name="" value="C" id ="clearbutton" 
+                onclick="calcy.answer.value=' ' ">
+                
+                <input type ="button" name="" value="=" id ="clearbutton" 
+                onclick="calcy.answer.value = eval(calcy.answer.value) ">
+
+                </div>
+               
+               
+               
+               
+                <div class ="layer1">
+                    <input type ="button" name ="" class ="main_num" value ="7" 
                      onclick ="calcy.answer.value += '7' ">
-                     <input type ="text" name ="" class ="main_num" value ="8" 
+                     <input type ="button" name ="" class ="main_num" value ="8" 
                      onclick ="calcy.answer.value += '8' ">
-                     <input type ="text" name ="" class ="main_num" value ="9" 
+                     <input type ="button" name ="" class ="main_num" value ="9" 
                      onclick ="calcy.answer.value += '9' ">
+                     <input type ="button" name="" class ="oper" value ="*" 
+                     onclick="calcy.answer.value += '*' ">
+
+                 </div>
+                 <div class ="layer1">
+                    <input type ="button" name ="" class ="main_num" value ="4" 
+                     onclick ="calcy.answer.value += '4' ">
+                     <input type ="button" name ="" class ="main_num" value ="5" 
+                     onclick ="calcy.answer.value += '5' ">
+                     <input type ="button" name ="" class ="main_num" value ="6" 
+                     onclick ="calcy.answer.value += '6' ">
+                     <input type ="button" name="" class ="oper" value ="-" 
+                     onclick="calcy.answer.value += '-' ">
+
+                 </div>
+
+                 <div class ="layer1">
+                    <input type ="button" name ="" class ="main_num" value ="1" 
+                     onclick ="calcy.answer.value += '1' ">
+                     <input type ="button" name ="" class ="main_num" value ="2" 
+                     onclick ="calcy.answer.value += '2' ">
+                     <input type ="button" name ="" class ="main_num" value ="3" 
+                     onclick ="calcy.answer.value += '3' ">
+                     <input type ="button" name="" class ="oper" value ="+" 
+                     onclick="calcy.answer.value += '+' ">
+
+                 </div>
+                 <div class ="layer1">
+                    <input type ="button" name ="" class ="main_num" value ="." 
+                     onclick ="calcy.answer.value += '.' ">
+                     <input type ="button" name ="" class ="main_num" value ="0" 
+                     onclick ="calcy.answer.value += '0' ">
+                     <input type ="button" name ="" class ="main_num" value ="%" 
+                     onclick ="calcy.answer.value += '%' ">
+                     <input type ="button" name="" class ="oper" value ="/" 
+                     onclick="calcy.answer.value += '/' ">
 
                  </div>
        

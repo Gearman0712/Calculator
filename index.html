@@ -40,12 +40,43 @@
  font-size: 2rem ;
  color: white;
  text-align: right;
-
+outline: none;
+border : none;
  }
- 
+ .layer1{
+     width: inherit;
+     height: 90px;
+     display: flex;
+     justify-content: center;
+ }
+ .layer2{
+     width: inherit;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+ }
 
+input{
+    flex:1;
+    font-size: 1.4rem;
+    color: white;
+    border: 1px solid #504f4f;
+    outline: none;
+}
+.main_num{
+   background-color: #101011;
+   color: white; 
+}
+.oper{
+ background-color: #303030;
+}
 
+input:hover{
 
+background-color: #474747;
+border : 1px solid grey;
+
+}
 
         </style>
         
@@ -56,11 +87,11 @@
                 <input type ="text" name =" " value ="Calculator" id ="app_name">
                 
                 <input type ="text" name ="answer"  id ="display_answer">
-                <div>
-                <input type ="button" name="" value="C" id ="clearbutton" 
+                <div class ="layer2" >
+                <input type ="button" name=""  class ="oper" value="C" id ="clearbutton" 
                 onclick="calcy.answer.value=' ' ">
                 
-                <input type ="button" name="" value="=" id ="clearbutton" 
+                <input type ="button" name="" class ="oper" value="=" id ="clearbutton" 
                 onclick="calcy.answer.value = eval(calcy.answer.value) ">
 
                 </div>
@@ -103,11 +134,11 @@
 
                  </div>
                  <div class ="layer1">
-                    <input type ="button" name ="" class ="main_num" value ="." 
+                    <input type ="button" name ="" class ="oper" value ="." 
                      onclick ="calcy.answer.value += '.' ">
                      <input type ="button" name ="" class ="main_num" value ="0" 
                      onclick ="calcy.answer.value += '0' ">
-                     <input type ="button" name ="" class ="main_num" value ="%" 
+                     <input type ="button" name ="" class ="oper" value ="%" 
                      onclick ="calcy.answer.value += '%' ">
                      <input type ="button" name="" class ="oper" value ="/" 
                      onclick="calcy.answer.value += '/' ">
